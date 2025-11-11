@@ -1,11 +1,15 @@
 const Plant = ({ plant }) => {
   return (
-    <li
-      onClick={() => {
-        console.log(plant.name);
-      }}
-    >
+    <li>
       {plant.name}
+      <button
+        className="addButton"
+        onClick={() => {
+          console.log(plant);
+        }}
+      >
+        Add to cart
+      </button>
     </li>
   );
 };
