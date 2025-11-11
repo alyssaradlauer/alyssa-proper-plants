@@ -1,16 +1,21 @@
-const Plant = ({ plant }) => {
+const Plant = ({ plant, addToCart }) => {
   return (
-    <li>
-      {plant.name}
+    <div className="onePlant">
+      <span className="plantEmoji" role="img" aria-label={plant.name}>
+        {plant.image}
+      </span>
+
+      <h3>{plant.name}</h3>
+
       <button
         className="addButton"
         onClick={() => {
-          console.log(plant);
+          addToCart(plant);
         }}
       >
         Add to cart
       </button>
-    </li>
+    </div>
   );
 };
 

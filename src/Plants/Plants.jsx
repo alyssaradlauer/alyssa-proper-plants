@@ -1,14 +1,15 @@
 import Plant from "./Plant.jsx";
 
-const Plants = ({ plants }) => {
+const Plants = ({ plants, addToCart }) => {
   return (
     <div>
       <h2>Plants</h2>
-      <ul>
+
+      <div className="plantBox">
         {plants.map((plant) => {
-          return <Plant key={plant.id} plant={plant} />;
+          return <Plant key={plant.id} plant={plant} addToCart={addToCart} />;
         })}
-      </ul>
+      </div>
     </div>
   );
 };
